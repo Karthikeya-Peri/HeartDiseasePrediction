@@ -1,1 +1,75 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+df = pd.read_csv('Heart_Disease_Prediction.csv')
+
+type(df)
+
+sns.countplot(data['Sex'], label="count",)
+sns.countplot(y="Age",data=df, palette="bwr")
+corr = df.corr()
+corr
+import seaborn as sns
+sns.pairplot(data=df)
+import numpy as np
+import matplotlib.pyplot as plt 
+import pandas as pd
+
+
+# Initialize the lists for X and Y
+data = pd.read_csv('Heart_Disease_Prediction.csv')
+
+df = pd.DataFrame(data)
+
+BP = df['BP']
+Age = df['Age']
+
+
+ 
+# Plot the data using bar() method
+plt.bar(Age, BP, color='m')
+plt.title("BP for age")
+plt.xlabel("Age")
+plt.ylabel("BP")
+
+# Show the plot
+plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt 
+import pandas as pd
+
+
+# Initialize the lists for X and Y
+data = pd.read_csv('Heart_Disease_Prediction.csv')
+
+df = pd.DataFrame(data)
+Age = data['Age']
+Cholesterol = data['Cholesterol']
+
+
+# Plot the data using bar() method
+plt.bar(Age, BP, color='b')
+plt.title("Cholesterol for age")
+
+
+plt.xlabel("Age")
+plt.ylabel("Cholesterol")
+
+plt.show()
+
+df.plot(kind='scatter', y='Cholesterol', x='BP')
+
+df.describe
+df.head()
+df.head(20)
+
+plt.figure(figsize=(14, 14))
+sns.heatmap(corr,center=0, cmap='BrBG',annot=True)
+
+df['Heart Disease'].value_counts()
+sns.countplot(df['Heart Disease'], label="count",);
+df.corr()
